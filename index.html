@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Candy Chest</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1>CANDY CHEST</h1>
+
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="all_product.html">All Products</a>
+            <a href="about.html">About us</a>
+        </div>
+
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="cookies.jpg" >
+            <div class="text">Cookies</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="cake.jpg" alt="cakes">
+            <div class="text">Cakes</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="cold beverage.png" >
+            <div class="text">Cold Beverages</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="donut.jpg" >
+            <div class="text">Donuts</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="hot bev.jpg" >
+            <div class="text">Hot Beverages</div>
+          </div>
+          
+        </div>
+        <br>
+          
+          <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <script>
+            let slideIndex = 0;
+            showSlides();
+            function showSlides(){
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++){
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}
+              for (i = 0; i < dots.length; i++){
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 3000);
+            }
+          </script>
+
+          <table style="width: 100%;">
+            <tr >
+                <td>
+                    <table>
+                      <caption>OPENING HOURS</caption>
+                        <tr>
+                          <td>Monday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                        <tr>
+                          <td>Tuesday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                        <tr>
+                          <td>Wednesday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                        <tr>
+                          <td>Thursday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                        <tr>
+                          <td>Friday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                        <tr>
+                          <td>Saturday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                        <tr>
+                          <td>Sunday</td>
+                          <td>6AM - 7AM</td>
+                        </tr>
+                      </table>
+                </td>
+                <td>
+                    <p>See the location</p>
+                    <a href="https://www.google.com/maps/place/Candy+Chest/@6.9729808,80.778982,15z/data=!4m6!3m5!1s0x3ae3819013e96943:0x7f36a3087cf5b101!8m2!3d6.9729808!4d80.778982!16s%2Fg%2F11sn_2m9f1?hl=en"><img src="https://twogetlost.com/wp-content/uploads/2019/10/nuwara-eliya-golf-club.jpg" style="width: 400px;"> </a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
